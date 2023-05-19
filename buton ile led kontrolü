@@ -1,0 +1,101 @@
+int led1 =8;
+int led2 =9;
+int led3 =10;
+int led4 =11;
+int led5 =12;
+int but1 = 2;
+int but2 = 3;
+int but3 = 4;
+int but4 = 5;
+int but5 = 6;
+int but1deg=0;
+int but2deg=0;
+int but3deg=0;
+int but4deg=0;
+int but5deg=0;
+int but1durum=0;
+int but2durum=0;
+int but3durum=0;
+int but4durum=0;
+int but5durum=0;
+void setup() {
+pinMode(led1,OUTPUT);
+pinMode(led2,OUTPUT);
+pinMode(led3,OUTPUT);
+pinMode(led4,OUTPUT);
+pinMode(led5,OUTPUT);
+pinMode(but1,OUTPUT);
+pinMode(but2,OUTPUT);
+pinMode(but3,OUTPUT);
+pinMode(but4,OUTPUT);
+pinMode(but5,OUTPUT);
+
+}
+
+void loop() {
+  but1deg= digitalRead(but1);
+  but2deg= digitalRead(but2);
+  but3deg= digitalRead(but3);
+  but4deg= digitalRead(but4);
+  but5deg= digitalRead(but5);
+
+
+  if(but1deg==HIGH && but1durum==0){
+    digitalWrite(led1,HIGH);
+    but1durum=1;
+    delay(100);
+
+  }
+  else if(but1deg==HIGH && but1durum==1) {
+    digitalWrite(led1,LOW);
+    but1durum=0;
+    delay(100);
+  }
+  if(but2deg==HIGH && but2durum==0){
+    digitalWrite(led2,HIGH);
+    but2durum=1;
+    delay(100);
+
+  }
+  else if(but2deg==HIGH && but2durum==1){
+    digitalWrite(led2,LOW);
+    but2durum=0;
+    delay(100);
+  }
+  if(but3deg==HIGH && but3durum==0){
+    digitalWrite(led3,HIGH);
+    but3durum=1;
+    delay(100);
+
+  }
+  else if(but3deg==HIGH && but3durum==1){
+    digitalWrite(led3,LOW);
+    but3durum=0;
+    delay(100);
+  }
+  if(but4deg==HIGH && but4durum==0){
+    digitalWrite(led4,HIGH);
+    but4durum=1;
+    delay(100);
+
+  }
+  else if(but4deg==HIGH && but4durum==1){
+    digitalWrite(led4,LOW);
+    but4durum=0;
+    delay(100);
+  }
+  if(but5deg==HIGH && but5durum==0){
+    digitalWrite(led5,HIGH);
+    but5durum=1;
+    delay(100);
+
+  }
+  else if(but5deg==HIGH && but5durum==1){
+    digitalWrite(led5,LOW);
+    but5durum=0;
+    delay(100);
+  }
+  delay(100);
+
+
+}
